@@ -1,0 +1,52 @@
+<%= render "shared/header" %>
+<div class='main'>
+  <div class='greet-contents'>
+   <h1 class='greeting'>
+     おはようございます。
+   </h1>
+   <p class='todays'>
+    本日は１２月１２日です。
+   </p>
+  </div>
+</div>
+
+<div class='select-contents'>
+  <h2 class='contents-title'>
+  機能一覧
+  </h2>
+  <ul class='contents-lists'>
+    <li class='client-manegement-tag'>
+      <%= link_to "#", class:"client-link" do %>
+       <%= image_tag "1361578_l.jpg", class:"client-img" %>
+       <h3 class='client-manegement-text'>
+         顧客管理
+       </h3>
+       <p class='client-manegement-text2'>
+         顧客の情報を確認することができます
+       </p>
+      <% end %>
+    </li>
+    <li class='menber-chat-tag'>
+      <%= link_to "#", class:"menber-link" do %>
+      <%= image_tag "3882501_s.jpg", class:"menber-img" %>
+      <h3 class='menber-chat-text'>
+       メンバー一覧
+      </h3>
+      <p class='menber-chat-text2'>
+        メンバーの一覧を表示し、チャットもできます
+      </p>
+      <% end %>
+    </li>
+    <li class='task-manegement-tag'>
+      <%= link_to "#", class:"task-link" do %>
+      <%= image_tag "4127418_s.jpg", class:"task-img" %>
+      <h3 class='task-manegement-text'>
+        タスク管理
+      </h3>
+      <p class='task-manegement-text2'>
+        １日の仕事をまとめるのに便利です
+      </p>
+      <% end %>
+    </li>
+  </ul>
+</div>
