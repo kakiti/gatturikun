@@ -1,0 +1,31 @@
+<%= render "shared/header" %>
+<div class='menber-lists'>
+  <h2 class='menber-lists-title'>
+  メンバー一覧
+  </h2>
+  <table class='menber-table'>
+    <tr class='menber-table-th-tr'>
+      <th class='menber-table-th'>名前</th>
+      <th class='menber-table-th'>役職</th>
+      <th class='menber-table-th'>電話番号</th>
+      <th class='menber-table-th'>メールアドレス</th>
+    </tr>
+    <% @users.each do |user| %>
+      <tr class='menber-table-td-tr'>
+        <%= link_to "#" do %>
+        <td class="menber-tabele-td">
+          <%= user.name %>
+        </td>
+        <td class="menber-tabele-td">
+          <%= user.position.name %>
+          </td>
+        <td class="menber-tabele-td">
+          <%= user.phone_number%>
+        </td>
+        <td class="menber-tabele-td">
+          <%= user.email %>
+        </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>

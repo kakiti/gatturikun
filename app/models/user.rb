@@ -9,4 +9,7 @@ class User < ApplicationRecord
     validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
   end
   validates :position_id, numericality: { other_than: 1 }
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :position
 end

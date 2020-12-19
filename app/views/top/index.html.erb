@@ -2,7 +2,7 @@
 <div class='main'>
   <div class='greet-contents'>
    <h1 class='greeting'>
-     おはようございます。
+     <%= current_user.name %>さん、おはようございます。
    </h1>
    <p class='todays'>
     本日は１２月１２日です。
@@ -27,7 +27,7 @@
       <% end %>
     </li>
     <li class='menber-chat-tag'>
-      <%= link_to "#", class:"menber-link" do %>
+      <%= link_to users_index_path, class:"menber-link" do %>
       <%= image_tag "3882501_s.jpg", class:"menber-img" %>
       <h3 class='menber-chat-text'>
        メンバー一覧

@@ -1,0 +1,27 @@
+.menber-lists-title{
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+
+.menber-table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.menber-table-th-tr,.menber-table-td-tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+.menber-table-td-tr:hover{
+  background-color: #d4f0fd;
+}
+
+.menber-table-th,.menber-tabele-td{
+  text-align: center;
+  width: 25%;
+  padding: 15px 0;
+}

@@ -6,4 +6,7 @@ class Position < ActiveHash::Base
     { id: 4, name: '係長' },
     { id: 5, name: '部長' },
   ]
+
+  include ActiveHash::Associations
+  has_many :users
   end

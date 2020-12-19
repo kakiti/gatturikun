@@ -3,8 +3,8 @@
     <%= link_to "gatturikun", "/", class: "gatturikun-icon" %>
     <div class="nav">
       <ul class="lists-right">
-        <li><%= link_to "名前", "#", class: "user-nickname" %></li>
-        <li><%= link_to 'ログアウト', "#", class: "logout" %></li> 
+        <li><%= link_to current_user.name, "#", class: "user-nickname" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
       </ul>
     </div>
   </div>
