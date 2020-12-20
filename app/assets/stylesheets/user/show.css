@@ -1,0 +1,33 @@
+.menber-details{
+  width: 70vw;
+  margin: auto;
+}
+
+
+.menber-details-title{
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+
+
+.detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.detail-item {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 40%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}

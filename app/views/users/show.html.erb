@@ -1,0 +1,22 @@
+<%= render "shared/header" %>
+<div class='menber-details'>
+  <h2 class='menber-details-title'>
+    <%= @user.name %>さんの詳細
+  </h2>
+  <table class="detail-table" >
+    <tbody>
+      <tr>
+        <th class="detail-item">役職</th>
+        <td class="detail-value"><%= @user.position.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">メールアドレス</th>
+        <td class="detail-value"><%= @user.email %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">電話番号</th>
+        <td class="detail-value"><%= @user.phone_number %></td>
+      </tr>
+    </tbody>
+  </table>
+
