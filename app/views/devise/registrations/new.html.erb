@@ -15,8 +15,6 @@
           <div class='field-input'>
             <%= f.text_field :name, autofocus: true%>
           </div>
-        </div>
-        <div class='field'>
           <div class='field-label'>
             電話番号
             <i>(ハイフンなし)</i>
@@ -24,24 +22,18 @@
           <div class='field-input'>
             <%= f.text_field :phone_number, autofocus: true%>
           </div>
-        </div>
-        <div class='field'>
           <div class='field-label'>
             役職
           </div>
           <div class='field-input'>
             <%= f.collection_select(:position_id, Position.all, :id, :name, {}, { class:"select-box" })%>
           </div>
-        </div>
-        <div class='field'>
           <div class='field-label'>
             メールアドレス
           </div>
           <div class='field-input'>
             <%= f.email_field :email%>
           </div>
-        </div>
-        <div class='field'>
           <div class='field-label'>
             パスワード
             <i>(英数字6文字以上)</i>
@@ -49,8 +41,6 @@
           <div class='field-input'>
             <%= f.password_field :password, autocomplete: "off"%>
           </div>
-        </div>
-        <div class='field'>
           <div class='field-label'>
             パスワード
             <i>(確認用)</i>

@@ -1,0 +1,65 @@
+<%= render "shared/header" %>
+<div class='client-new-page' id='client-new-page'>
+  <div class='client-new-page__inner clearfix'>
+    <div class='client-new-page__inner--left client-new-page__header'>
+      <h2>新規顧客登録</h2>
+    </div>
+    <div class='client-new-page__inner--right user-form'>
+      <%= form_with model: @client, local: true do |f|%>
+       <%#= render 'shared/error_messages', model: f.object %>
+        <div class='field'>
+          <div class='field-label'>
+            名前
+            <i>(全角)</i>
+            <span class="indispensable">必須</span>
+          </div>
+          <div class='field-input'>
+            <%= f.text_area :last_name, class:"input-name", autofocus: true, placeholder:"例) 山田" %>
+            <%= f.text_area :first_name, class:"input-name", placeholder:"例) 陸太郎" %>
+          </div>
+          <div class='field-label'>
+            名前カナ
+            <i>(全角)</i>
+            <span class="indispensable">必須</span>
+          </div>
+          <div class='field-input'>
+            <%= f.text_area :last_name_kana, class:"input-name", placeholder:"例) ヤマダ" %>
+            <%= f.text_area :first_name_kana, class:"input-name", placeholder:"例) リクタロウ" %>
+          </div>
+          <div class='field-label'>
+            電話番号
+            <i>(ハイフンなし)</i>
+            <span class="indispensable">必須</span>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :phone_number %>
+          </div>
+          <div class='field-label'>
+            見込み
+            <span class="indispensable">必須</span>
+          </div>
+          <div class='field-input'>
+            <%= f.collection_select(:prospect_id, Prospect.all, :id, :name, {}, { class:"prospect-select-box" }) %>
+          </div>
+          <div class='field-label'>
+            最終対応日
+            <span class="indispensable">必須</span>
+          </div>
+          <div class='field-input'>
+            <%= f.date_field :date %>
+          </div>
+          <div class='field-label'>
+            メモ
+          </div>
+          <div class='field-input'>
+            <%= f.text_area :memo, class:"client-memo" %>
+          </div>
+          <div class='actions'>
+            <%= f.submit "登録する", class: 'btn'%>
+          </div>
+          
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

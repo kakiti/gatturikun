@@ -1,0 +1,111 @@
+.client-new-page .client-new-page__inner {
+  width: 100%;
+  margin: 60px auto;
+  padding: 60px 15%;
+  background-color: #fff;
+}
+.client-new-page .client-new-page__inner .client-new-page__inner--left, .client-new-page .client-new-page__inner .client-new-page__inner--right {
+  float: left;
+  width: 50%;
+}
+.client-new-page .client-new-page__inner:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.client-new-page .client-new-page__header h2 {
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-size: 40px;
+  font-weight: 200;
+}
+.client-new-page .client-new-page__header h2:after {
+  content: "";
+  display: block;
+  width: 60px;
+  margin-top: 5px;
+  border-bottom: 1px solid #38aef0;
+}
+.client-new-page .client-new-page__header h5 {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 200;
+}
+.client-new-page .client-new-page__header .btn {
+  margin-top: 20px;
+  color: #fff;
+  background-color: #ccc;
+  font-size: 14px;
+}
+.client-new-page .field {
+  margin-bottom: 10px;
+}
+.client-new-page .field .field-label {
+  padding: 10px 0;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 200;
+}
+.client-new-page .field .field-label i {
+  font-size: 11px;
+}
+.client-new-page .field .field-input input {
+  width: 90%;
+  padding: 10px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.input-name {
+  width: 40%;
+  margin-right: 20px;
+  height: 48px;
+  line-height: 30px;
+  padding: 10px 16px 8px;
+  background: #fff;
+  font-size: 14px;
+  resize: none;
+}
+.client-new-page .btn {
+  display: inline-block;
+  height: 50px;
+  padding: 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+}
+.client-new-page input[type=submit] {
+  float: left;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #38aef0;
+}
+
+.client-new-page .field-input .field_with_errors {
+  border: 1px solid red;
+}
+
+.prospect-select-box{
+  height: 30px;
+  width: 30%;
+  padding-left: 10px;
+}
+
+.client-memo{
+  width: 90%;
+  padding: 10px;
+  resize: none;
+}
+
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
