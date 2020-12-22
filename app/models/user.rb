@@ -10,6 +10,7 @@ class User < ApplicationRecord
   end
   validates :position_id, numericality: { other_than: 1 }
 
+  has_many :clients
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :position
 end

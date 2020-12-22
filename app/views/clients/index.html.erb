@@ -1,1 +1,36 @@
-
+<%= render "shared/header" %>
+<div class='client-new'>
+  <%= link_to '新規登録', new_client_path, class: "client-new-btn" %>
+</div>
+<div class='client-lists'>
+  <h2 class='client-lists-title'>
+   顧客一覧
+  </h2>
+  <table class='client-table'>
+    <tr class='client-table-th-tr'>
+      <th class='client-table-th'>名前</th>
+      <th class='client-table-th'>電話番号</th>
+      <th class='client-table-th'>見込み</th>
+      <th class='client-table-th'>最終対応日</th>
+      <th class='client-table-th'>担当者</th>
+    </tr>
+    <% @clients.each do |client| %>
+      <tr class='client-table-td-tr' data-id=<%= client.id %> >
+        <td class="client-table-td" >
+          <div> <%= client.last_name %><%= client.first_name %> </div>
+        </td>
+        <td class="client-table-td">
+          <div> <%= client.tel_number %> </div>
+          </td>
+        <td class="client-table-td">
+          <div> <%= client.prospect.name %> </div>
+        </td>
+        <td class="client-table-td">
+          <div> <%= client.date.strftime('%m/%d') %> </div>
+        </td>
+        <td class="client-table-td">
+          <div> <%= client.user.name %> </div>
+        </td>
+      </tr>
+    <% end %>
+  </table>

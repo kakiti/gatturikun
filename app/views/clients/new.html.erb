@@ -6,7 +6,7 @@
     </div>
     <div class='client-new-page__inner--right user-form'>
       <%= form_with model: @client, local: true do |f|%>
-       <%#= render 'shared/error_messages', model: f.object %>
+       <%= render 'shared/error_messages', model: f.object %>
         <div class='field'>
           <div class='field-label'>
             名前
@@ -15,7 +15,7 @@
           </div>
           <div class='field-input'>
             <%= f.text_area :last_name, class:"input-name", autofocus: true, placeholder:"例) 山田" %>
-            <%= f.text_area :first_name, class:"input-name", placeholder:"例) 陸太郎" %>
+            <%= f.text_area :first_name, class:"input-name", placeholder:"例) 太郎" %>
           </div>
           <div class='field-label'>
             名前カナ
@@ -24,15 +24,15 @@
           </div>
           <div class='field-input'>
             <%= f.text_area :last_name_kana, class:"input-name", placeholder:"例) ヤマダ" %>
-            <%= f.text_area :first_name_kana, class:"input-name", placeholder:"例) リクタロウ" %>
+            <%= f.text_area :first_name_kana, class:"input-name", placeholder:"例) タロウ" %>
           </div>
           <div class='field-label'>
             電話番号
-            <i>(ハイフンなし)</i>
+            <i>(ハイフンなし、半角)</i>
             <span class="indispensable">必須</span>
           </div>
           <div class='field-input'>
-            <%= f.text_field :phone_number %>
+            <%= f.text_field :tel_number, placeholder:"例) 09012345678" %>
           </div>
           <div class='field-label'>
             見込み

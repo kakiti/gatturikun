@@ -13,16 +13,16 @@
     <% @users.each do |user| %>
       <tr class='menber-table-td-tr' data-id=<%= user.id %> >
         <td class="menber-table-td" >
-          <div id="menber-path"> <%=user.name %> </div>
+          <div> <%=user.name %> </div>
         </td>
         <td class="menber-table-td">
-          <div id="menber-path"> <%= user.position.name %> </div>
+          <div> <%= user.position.name %> </div>
           </td>
         <td class="menber-table-td">
-          <div id="menber-path"> <%= user.phone_number %> </div>
+          <div> <%= user.phone_number %> </div>
         </td>
         <td class="menber-table-td">
-          <div id="menber-path"> <%= user.email %> </div>
+          <div> <%= user.email %> </div>
         </td>
       </tr>
     <% end %>

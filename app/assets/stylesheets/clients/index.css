@@ -1,0 +1,44 @@
+.client-new{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.client-new-btn {
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 5vw;
+  border-radius: 100vh;
+}
+
+.client-lists-title, .client-client-lists-title{
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+
+.client-table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.client-table-th-tr,.client-table-td-tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+.client-table-td-tr:hover{
+  background-color: #d4f0fd;
+}
+
+.client-table-th,.client-table-td{
+  text-align: center;
+  width: 20%;
+  padding: 15px 0;
+}
