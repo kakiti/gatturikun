@@ -1,0 +1,59 @@
+.client-details{
+  width: 70vw;
+  margin: auto;
+}
+
+
+.client-details-title{
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+
+
+.client-detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.client-detail-item {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.client-detail-value {
+  width: 40%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}
+
+.client-detail-btns{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.client-edit-btn{
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 8vw;
+}
+
+.client-destroy-btn{
+  background-color: lightgray;
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  margin: 20px 0px;
+  padding: 2vh 5vw;
+}

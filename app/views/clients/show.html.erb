@@ -1,0 +1,57 @@
+<%= render "shared/header" %>
+<div class='client-details'>
+  <h2 class='client-details-title'>
+    <%= @client.last_name %><%= @client.first_name %>様の詳細
+  </h2>
+  <table class="client-detail-table" >
+    <tbody>
+      <tr>
+        <th class="client-detail-item">苗字カナ</th>
+        <td class="client-detail-value"><%= @client.last_name_kana %></td>
+      </tr>
+      <tr>
+        <th class="client-detail-item">苗字</th>
+        <td class="client-detail-value"><%= @client.last_name %></td>
+      </tr>
+      <tr>
+        <th class="client-detail-item">名前カナ</th>
+        <td class="client-detail-value"><%= @client.first_name_kana %></td>
+      </tr>
+      <tr>
+        <th class="client-detail-item">名前</th>
+        <td class="client-detail-value"><%= @client.first_name %></td>
+      </tr>
+      <tr>
+        <th class="client-detail-item">電話番号</th>
+        <td class="client-detail-value"><%= @client.tel_number %></td>
+      </tr>
+      <tr>
+        <th class="client-detail-item">見込み</th>
+        <td class="client-detail-value"><%= @client.prospect.name %></td>
+      </tr>
+      <tr>
+        <th class="client-detail-item">最終対応日</th>
+        <td class="client-detail-value"><%= @client.date.strftime('%m/%d') %></td>
+      </tr>
+      <tr>
+        <th class="client-detail-item">担当者</th>
+        <td class="client-detail-value"><%= @client.user.name %></td>
+      </tr>
+      <tr>
+        <th class="client-detail-item">メモ</th>
+        <% if @client.memo.empty? %>
+          <td class="client-detail-value">※まだメモがありません</td>
+        <% else %>
+          <td class="client-detail-value"><%= @client.memo %></td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<% if user_signed_in? && current_user.id == @client.user_id %>
+  <div class="client-detail-btns">
+    <%= link_to '編集', edit_client_path(@client.id), class: "client-edit-btn" %>
+    <%= link_to '削除', client_path, method: :delete, class: "client-destroy-btn" %>
+  </div>
+<% end %>
