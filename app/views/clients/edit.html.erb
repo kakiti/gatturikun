@@ -1,8 +1,10 @@
+<%# cssは新規顧客登録のものを併用しています。
+app/assets/stylesheets/clients/new.css %>
 <%= render "shared/header" %>
 <div class='client-page' id='client-page'>
   <div class='client-page__inner clearfix'>
     <div class='client-page__inner--left client-page__header'>
-      <h2>新規顧客登録</h2>
+      <h2>顧客情報編集</h2>
     </div>
     <div class='client-page__inner--right user-form'>
       <%= form_with model: @client, local: true do |f|%>
@@ -55,10 +57,9 @@
             <%= f.text_area :memo, class:"client-memo" %>
           </div>
           <div class='actions'>
-            <%= f.submit "登録する", class: 'btn'%>
+            <%= f.submit "編集する", class: 'btn'%>
             <%= link_to "戻る" , :back, class:"back-btn" %>
           </div>
-          
         </div>
       <% end %>
     </div>

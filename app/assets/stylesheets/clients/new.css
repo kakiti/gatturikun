@@ -1,55 +1,55 @@
-.client-new-page .client-new-page__inner {
+.client-page .client-page__inner {
   width: 100%;
   margin: 60px auto;
   padding: 60px 15%;
   background-color: #fff;
 }
-.client-new-page .client-new-page__inner .client-new-page__inner--left, .client-new-page .client-new-page__inner .client-new-page__inner--right {
+.client-page .client-page__inner .client-page__inner--left, .client-page .client-page__inner .client-page__inner--right {
   float: left;
   width: 50%;
 }
-.client-new-page .client-new-page__inner:after {
+.client-page .client-page__inner:after {
   clear: both;
   content: "";
   display: block;
 }
-.client-new-page .client-new-page__header h2 {
+.client-page .client-page__header h2 {
   margin-bottom: 10px;
   letter-spacing: 3px;
   font-size: 40px;
   font-weight: 200;
 }
-.client-new-page .client-new-page__header h2:after {
+.client-page .client-page__header h2:after {
   content: "";
   display: block;
   width: 60px;
   margin-top: 5px;
   border-bottom: 1px solid #38aef0;
 }
-.client-new-page .client-new-page__header h5 {
+.client-page .client-page__header h5 {
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 200;
 }
-.client-new-page .client-new-page__header .btn {
+.client-page .client-page__header .btn {
   margin-top: 20px;
   color: #fff;
   background-color: #ccc;
   font-size: 14px;
 }
-.client-new-page .field {
+.client-page .field {
   margin-bottom: 10px;
 }
-.client-new-page .field .field-label {
+.client-page .field .field-label {
   padding: 10px 0;
   letter-spacing: 1px;
   font-size: 14px;
   font-weight: 200;
 }
-.client-new-page .field .field-label i {
+.client-page .field .field-label i {
   font-size: 11px;
 }
-.client-new-page .field .field-input input {
+.client-page .field .field-input input {
   width: 90%;
   padding: 10px;
   letter-spacing: 1px;
@@ -67,7 +67,7 @@
   font-size: 14px;
   resize: none;
 }
-.client-new-page .btn {
+.client-page .btn {
   display: inline-block;
   height: 50px;
   padding: 0 30px;
@@ -77,7 +77,7 @@
   border: none;
   border-radius: 2px;
 }
-.client-new-page input[type=submit] {
+.client-page input[type=submit] {
   float: left;
   margin-top: 20px;
   color: #fff;
@@ -96,6 +96,16 @@
   resize: none;
 }
 
+.client-page .field-input .field_with_errors {
+  display: contents;
+}
+
+.actions{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
 .indispensable {
   background: #ea352d;
   margin-left: 8px;
@@ -104,4 +114,19 @@
   color: #fff;
   font-size: 12px;
   font-weight: bold;
+}
+
+.back-btn{
+  margin-top: 20px;
+  background: #00a7ee;
+  display: inline-block;
+  height: 50px;
+  padding: 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+  color: #fff;
+
 }

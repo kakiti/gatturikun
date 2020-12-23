@@ -1,5 +1,6 @@
 class ClientsController < ApplicationController
   before_action :move_to_login
+  before_action :set_client, only:[:show, :edit, :update, :destroy]
   
   def index
     @clients = Client.order('created_at DESC')
@@ -19,19 +20,32 @@ class ClientsController < ApplicationController
   end
 
   def show
-    @client = Client.find(params[:id])
   end
 
   def edit
   end
 
+  def update
+    if @client.update(client_params)
+      redirect_to client_path(@client.id)
+    else
+      render :edit
+    end
+  end
+
   def destroy
+    @client.destroy
+    redirect_to clients_path
   end
 
   private
 
   def client_params
     params.require(:client).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :tel_number, :prospect_id, :date, :memo).merge(user_id: current_user.id)
+  end
+
+  def set_client
+    @client = Client.find(params[:id])
   end
 
   def move_to_login
