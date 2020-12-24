@@ -11,6 +11,7 @@ class User < ApplicationRecord
   validates :position_id, numericality: { other_than: 1 }
 
   has_many :clients
+  has_many :tasks, dependent: :destroy
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :position
 end

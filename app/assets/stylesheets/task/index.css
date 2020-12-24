@@ -1,0 +1,36 @@
+.task-new{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.task-new-btn {
+  text-align: center;
+  margin: 20px 0px;
+  padding: 2vh 5vw;
+  border-radius: 100vh;
+}
+
+.task-lists-title, .task-lists-title{
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+
+.task-table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.task-table-th-tr,.task-table-td-tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+.task-table-th,.task-table-td{
+  text-align: center;
+  width: 20%;
+  padding: 15px 0;
+}

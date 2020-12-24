@@ -38,7 +38,7 @@
       <% end %>
     </li>
     <li class='task-manegement-tag'>
-      <%= link_to "#", class:"task-link" do %>
+      <%= link_to user_tasks_path(current_user.id), class:"task-link" do %>
       <%= image_tag "4127418_s.jpg", class:"task-img" %>
       <h3 class='task-manegement-text'>
         タスク管理
