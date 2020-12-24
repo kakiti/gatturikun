@@ -2,7 +2,13 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  margin: 30px auto;
 }
+
+.task-new .task-form{
+  margin-right: 5px;
+}
+
 .task-new-btn {
   text-align: center;
   margin: 20px 0px;
@@ -26,11 +32,19 @@
 
 .task-table-th-tr,.task-table-td-tr{
   border-bottom: solid 1px #eee;
-  cursor: pointer;
 }
 
 .task-table-th,.task-table-td{
   text-align: center;
   width: 20%;
   padding: 15px 0;
+}
+
+.check_box{
+  cursor: pointer;
+}
+
+.task-destroy-btn{
+  font-style: oblique;
+  color: red;
 }

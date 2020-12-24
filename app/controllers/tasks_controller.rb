@@ -6,9 +6,6 @@ class TasksController < ApplicationController
     @tasks = @user.tasks
   end
 
-  def new
-  end
-
   def create
     task = Task.create(task_params)
     render json:{ task: task }
@@ -19,6 +16,18 @@ class TasksController < ApplicationController
   def destroy
     task = Task.find(params[:id])
     task.destroy
+  end
+
+  def checked
+    task = Task.find(params[:id])
+    if task.check 
+      task.update(check: false)
+    else
+      task.update(check: true)
+    end
+
+    item = Task.find(params[:id])
+    render json: { task: item }
   end
 
   private

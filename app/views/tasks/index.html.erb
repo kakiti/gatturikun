@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 <div class='task-new' id='task-new-id' data-id=<%= @user.id %>>
   <%= form_with model: [@user, @task], url: user_tasks_path(@user.id), method: :post, id: "form" do |f| %>
-    <%= f.text_field :content, id: "content" %>
+    <%= f.text_field :content, id: "content", class: "task-form" %>
     <%= f.submit '追加する', id: "add-submit" %>
   <% end %>
 </div>
@@ -19,7 +19,7 @@
     <% @tasks.each do |task| %>
       <tr class='task-table-td-tr' data-id=<%= task.id %> >
         <td class="task-table-td" >
-          <%= check_box :task, :check, {class: "check_box"}, true, false %>
+            <%= check_box :task, :check, {class: "check_box", checked: task.check},true,false %>
         </td>
         <td class="task-table-td">
           <div> <%= task.content %> </div>
