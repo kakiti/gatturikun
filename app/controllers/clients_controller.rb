@@ -1,6 +1,7 @@
 class ClientsController < ApplicationController
   before_action :move_to_login
   before_action :set_client, only:[:show, :edit, :update, :destroy]
+  before_action :move_to_root, only:[:edit, :update, :destroy]
   
   def index
     @clients = Client.order('created_at DESC')
@@ -50,6 +51,10 @@ class ClientsController < ApplicationController
 
   def move_to_login
     redirect_to new_user_session_path unless user_signed_in?
+  end
+
+  def move_to_root
+    redirect_to root_path if  @client.user != current_user
   end
 
 end

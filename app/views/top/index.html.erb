@@ -5,7 +5,7 @@
      <%= current_user.name %>さん、おはようございます。
    </h1>
    <p class='todays'>
-    本日は１２月１２日です。
+    本日は<%= Date.current.strftime('%m月%d日') %>です。
    </p>
   </div>
 </div>

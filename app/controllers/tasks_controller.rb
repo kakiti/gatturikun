@@ -1,7 +1,10 @@
 class TasksController < ApplicationController
   before_action :move_to_login
+  before_action :set_task, only: [:create, :destroy, :checked]
+  before_action :move_to_root, only: [:create, :destroy, :checked]
   def index
     @user = User.find(params[:user_id])
+    redirect_to root_path unless @user.id == current_user.id
     @task = Task.new
     @tasks = @user.tasks
   end
@@ -38,5 +41,13 @@ class TasksController < ApplicationController
 
   def move_to_login
     redirect_to new_user_session_path unless user_signed_in?
+  end
+
+  def set_task
+    task = Task.find(params[:id])
+  end
+
+  def move_to_root
+    redirect_to root_path if task.user != current_user
   end
 end
