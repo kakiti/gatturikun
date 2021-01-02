@@ -6,6 +6,7 @@
   width: 100vw;
   padding: 2vh 15vw;
   background-color: #f1f8fe;
+  position: relative;
 }
 
 .bar {
@@ -47,4 +48,21 @@
   color: #333333;
 }
 
+.back{
+  position: absolute;
+  left: 1%;
+}
+
+.back-btn{
+  background: #00a7ee;
+  display: inline-block;
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+  color: #fff;
+}
 

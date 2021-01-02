@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action move_to_root
+  before_action :move_to_login
   def index
-    @users = User.all
+    @users = User.order('created_at DESC')
   end
 
   def show

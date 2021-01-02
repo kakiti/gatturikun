@@ -1,4 +1,21 @@
 ja:
-  time:
-    formats:
-      default: "%Y/%m/%d %H:%M:%S"
+ activerecord:
+   attributes:
+     user:
+       name: 名前
+       phone_number: 電話番号
+       position_id: 役職
+     client:
+       last_name: 苗字
+       first_name: 名前
+       last_name_kana: 苗字(フリガナ)
+       first_name_kana: 名前(フリガナ)
+       tel_number: 電話番号
+       date: 最終対応日
+       prospect_id: 見込み
+ time:
+  formats:
+    default: "%Y/%m/%d %H:%M:%S"
+ errors:
+  messages:
+    other_than: は--以外を選択してください

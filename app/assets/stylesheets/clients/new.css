@@ -100,12 +100,6 @@
   display: contents;
 }
 
-.actions{
-  display: flex;
-  justify-content: space-between;
-  width: 95%;
-}
-
 .indispensable {
   background: #ea352d;
   margin-left: 8px;
@@ -114,19 +108,4 @@
   color: #fff;
   font-size: 12px;
   font-weight: bold;
-}
-
-.back-btn{
-  margin-top: 20px;
-  background: #00a7ee;
-  display: inline-block;
-  height: 50px;
-  padding: 0 30px;
-  line-height: 50px;
-  letter-spacing: 1px;
-  border: none;
-  border-radius: 2px;
-  text-decoration: none;
-  color: #fff;
-
 }
