@@ -10,7 +10,7 @@ class TasksController < ApplicationController
 
   def create
     task = Task.create(task_params)
-    render json:{ task: task }
+    render json: { task: task }
   end
 
   def destroy
@@ -22,7 +22,7 @@ class TasksController < ApplicationController
   def checked
     task = Task.find(params[:id])
     redirect_to root_path if task.user_id != current_user.id
-    if task.check 
+    if task.check
       task.update(check: false)
     else
       task.update(check: true)

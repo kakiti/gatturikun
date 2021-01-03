@@ -12,9 +12,9 @@ class Client < ApplicationRecord
     validates :date
     validates :user_id
   end
-    
+
   validates :prospect_id, numericality: { other_than: 1 }
-  
+
   belongs_to :user
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prospect

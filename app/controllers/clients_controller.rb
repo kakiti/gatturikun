@@ -1,8 +1,8 @@
 class ClientsController < ApplicationController
   before_action :move_to_login
-  before_action :set_client, only:[:show, :edit, :update, :destroy]
-  before_action :move_to_root, only:[:edit, :update, :destroy]
-  
+  before_action :set_client, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_root, only: [:edit, :update, :destroy]
+
   def index
     @clients = Client.order('created_at DESC')
   end
@@ -42,7 +42,8 @@ class ClientsController < ApplicationController
   private
 
   def client_params
-    params.require(:client).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :tel_number, :prospect_id, :date, :memo).merge(user_id: current_user.id)
+    params.require(:client).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :tel_number, :prospect_id, :date,
+                                   :memo).merge(user_id: current_user.id)
   end
 
   def set_client
@@ -54,7 +55,6 @@ class ClientsController < ApplicationController
   end
 
   def move_to_root
-    redirect_to root_path if  @client.user != current_user
+    redirect_to root_path if @client.user != current_user
   end
-
 end

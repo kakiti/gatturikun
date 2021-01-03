@@ -8,11 +8,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def edit
-  end
-
   private
-  
+
   def move_to_login
     redirect_to new_user_session_path unless user_signed_in?
   end
