@@ -8,6 +8,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def edit
+  end
+
   private
   
   def move_to_login

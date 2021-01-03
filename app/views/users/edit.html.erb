@@ -1,11 +1,11 @@
-<%= render "shared/header" %>
 <div class='account-page' id='account-page'>
   <div class='account-page__inner clearfix'>
     <div class='account-page__inner--left account-page__header'>
-      <h2>アカウント編集</h2>
+      <h2>アカウント情報編集</h2>
+      <%= render "devise/shared/links"%>
     </div>
     <div class='account-page__inner--right user-form'>
-      <%= form_with model: @user, url: user_registration_path, local: true do |f|%>
+      <%= form_with model: @user, url: , method: :post, local: true do |f|%>
        <%= render 'shared/error_messages', model: f.object %>
         <div class='field'>
           <div class='field-label'>
@@ -32,12 +32,6 @@
           </div>
           <div class='field-input'>
             <%= f.email_field :email%>
-          </div>
-          <div class='field-label'>
-            現在のパスワード
-          </div>
-          <div class='field-input'>
-            <%= f.password_field :current_password, autocomplete: "current-password"%>
           </div>
           <div class='field-label'>
             パスワード
